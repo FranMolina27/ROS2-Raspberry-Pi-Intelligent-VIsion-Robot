@@ -51,21 +51,21 @@ def reverse(seconds):
 
 def left(seconds):
     print("Left moving")
-    GPIO.output(motor_derecha_cw, GPIO.LOW)
-    GPIO.output(motor_derecha_ccw, GPIO.HIGH)
-    GPIO.output(motor_izquierda_cw, GPIO.HIGH)
-    GPIO.output(motor_izquierda_ccw, GPIO.LOW)
-    sleep(seconds)
-
-def right(seconds):
-    print("Right moving")
     GPIO.output(motor_derecha_cw, GPIO.HIGH)
     GPIO.output(motor_derecha_ccw, GPIO.LOW)
     GPIO.output(motor_izquierda_cw, GPIO.LOW)
     GPIO.output(motor_izquierda_ccw, GPIO.HIGH)
     sleep(seconds)
 
-def stop(seconds):
+def right(seconds):
+    print("Right moving")
+    GPIO.output(motor_derecha_cw, GPIO.LOW)
+    GPIO.output(motor_derecha_ccw, GPIO.HIGH)
+    GPIO.output(motor_izquierda_cw, GPIO.HIGH)
+    GPIO.output(motor_izquierda_ccw, GPIO.LOW)
+    sleep(seconds)
+
+def stop():
     print("Stopping motors")
     pwm_motor_derecho.ChangeDutyCycle(0)
     pwm_motor_izquierdo.ChangeDutyCycle(0)

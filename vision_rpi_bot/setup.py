@@ -21,7 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
         'publisher_rpi_node = vision_rpi_bot.publisher_member_function:main',
-        'subscriber_rpi_node = vision_rpi_bot.subscriber_member_function:main'
+        'subscriber_rpi_node = vision_rpi_bot.subscriber_member_function:main',
+        'cmd_to_pwm_driver = vision_rpi_bot.cmd_to_pwm_driver:main'
         ],
     },
 )
